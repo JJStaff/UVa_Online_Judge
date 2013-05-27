@@ -1,0 +1,10 @@
+bin/
+obj/
+*.cbp
+*.depend
+*.layout
+*.class
+*.project
+*.settings/
+*.classpath
+*.settings
