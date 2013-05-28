@@ -9,23 +9,26 @@ int main()
 {
     int i = 0;
     int j = 0;
-    int answers[1000001] = {0};
+    int answers[1000001] = { 0 };
     answers[1] = 1;
 
     //While input is valid
-    while (cin >> i >> j) {
+    while (cin >> i >> j)
+    {
         int lower = i;
         int upper = j;
         int max_cycle_length = 0;
 
         //Check if the range is given backwards
-        if (i > j) {
+        if (i > j)
+        {
             lower = j;
             upper = i;
         }
 
         //Find the max cycle length for this case
-        for (int x = lower; x <= upper; x++) {
+        for (int x = lower; x <= upper; x++)
+        {
             int this_cycle_length = get_answer(x, answers);
 
             if (this_cycle_length > max_cycle_length)
@@ -39,7 +42,8 @@ int main()
 }
 
 //Returns the answer for x, takes the answers array.
-int get_answer(register const int x, register int * const answers) {
+int get_answer(register const int x, register int * const answers)
+{
     register int cycle_length = 0;
 
     //Return answer if already calculated
@@ -59,5 +63,4 @@ int get_answer(register const int x, register int * const answers) {
 
     return cycle_length;
 }
-
 

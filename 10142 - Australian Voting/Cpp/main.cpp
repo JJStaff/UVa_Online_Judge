@@ -11,17 +11,13 @@ using namespace std;
 int main()
 {
     //Holds ballot input
-    int ballots[1000][20] =
-    { 0 };
+    int ballots[1000][20] = { 0 };
     //Holds candidates names
-    string candidates[20] =
-    { "" };
+    string candidates[20] = { "" };
     //Determines which candidates are still are in the race
-    bool possible_candidates[20] =
-    { true };
+    bool possible_candidates[20] = { true };
     //Vote count array
-    int votes[20] =
-    { 0 };
+    int votes[20] = { 0 };
     //Input line
     string line = "";
     //Number of test cases
@@ -42,8 +38,7 @@ int main()
         //Number of ballots
         int num_ballots = 0;
         //Ballot tokens
-        string tokens[] =
-        { "" };
+        string tokens[] = { "" };
 
         getline(cin, line);
 
