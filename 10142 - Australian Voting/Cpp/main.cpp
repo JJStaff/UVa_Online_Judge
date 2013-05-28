@@ -11,13 +11,17 @@ using namespace std;
 int main()
 {
     //Holds ballot input
-    int ballots[1000][20] = {0};
+    int ballots[1000][20] =
+    { 0 };
     //Holds candidates names
-    string candidates[20] = {""};
+    string candidates[20] =
+    { "" };
     //Determines which candidates are still are in the race
-    bool possible_candidates[20] = {true};
+    bool possible_candidates[20] =
+    { true };
     //Vote count array
-    int votes[20] = {0};
+    int votes[20] =
+    { 0 };
     //Input line
     string line = "";
     //Number of test cases
@@ -38,7 +42,8 @@ int main()
         //Number of ballots
         int num_ballots = 0;
         //Ballot tokens
-        string tokens[] = {""};
+        string tokens[] =
+        { "" };
 
         getline(cin, line);
 
@@ -87,7 +92,7 @@ int main()
                 {
                     //Place the voter's next possible candidate in first column
                     for (int j = 1; j < num_candidates; j++)
-                        if(possible_candidates[ballots[i][j] - 1])
+                        if (possible_candidates[ballots[i][j] - 1])
                         {
                             ballots[i][0] = ballots[i][j];
                             votes[ballots[i][0] - 1] += 1;
@@ -114,8 +119,7 @@ int main()
             if (min_votes == max_votes)
             {
                 winner_found = true;
-            }
-            else
+            } else
             {
                 //Revoke candidates with min votes
                 for (int x = 0; x < num_candidates; x++)
